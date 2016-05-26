@@ -1,0 +1,9 @@
+{
+	"host": "http://localhost:3000",
+	"dbURI": "mongodb://chatcatuser:chatcatuser@ds011883.mlab.com:11883/chatcat_db",
+	"sessionSecret": "catscanfly",
+	"fb": {
+		"clientId": "369424419894578",
+		"clientSecret": "6ddc9609e67cdcb539dfec9a5c6d9982"
+	}
+}
