@@ -1,4 +1,5 @@
-const helper = require('../helpers');
+var helper = require('../helpers');
+var passport = require('passport');
 
 module.exports = function () {
 	let routes = {
@@ -11,7 +12,12 @@ module.exports = function () {
 			},
 			'/chat': function (req, res, next) {
 				res.render('chatroom')
-			}
+			},
+			'/auth/facebook': passport.authenticate('facebook'),
+			'/auth/facebook/callback': passport.authenticate('facebook', {
+				successRedirect: '/rooms',
+				failureRedirect: '/'
+			})
 		},
 		'post':{
 
